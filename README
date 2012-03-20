@@ -12,27 +12,37 @@ History has shown how dangerous such situations can get with many people getting
 
 ## The Model
 
-For our Simulations We are using the social force model from the papers in our references.
+We are using a cellular automata model, where each person is represented by a 3x4 matrix containing the coordinates and the information about the interactive environment.
+The simulation is performed on a large matrix, which simulates our environment (room, corridor with exit, different width of exits, a variety of forms of obstacles etc).
+The basic principle is to use a potential-like field, which gives every matrix entry a specific value, decreasing with the distance to the exit.
+Therefore a person`s matrix contains the values (potential, obstacles) around him. Combining these values with some variables determines the next step.  
+
 What we try is to focus on some specific variables:
 -the desired velocity, people want to reach. This is of course strongly related to the level of panic.
--interaction force: interactions between pedestrians as well as walls and other obstacles influence the flow of people.
-Studying different situations we hope to get informations about the resulting speed of a mass of people, the efficiency of the evacuation and the local density of people.
+-the realized velocity, which we can measure.
 
+We will test our model in situations, where there is danger (for example a fire) on one side of a room, und people want to excape in the opposite direction.
+Examples for such situations are cinemas, theaters or shopping centers.
 
 ## Fundamental Questions
 
 Can we optimize the flux and efficiency of a evacuation?
-  Can a evacuation route positively be manipulated by placing obstacles in the route?
-	Is there an analogy to hydrodynamics?	
-	What is the influence of the desired velocity on the efficiency of a evacuation? Faster is Slow?
+Is there a "perfect" geometry of a room, that optimizes an evacuation?
+	A cone-shaped room should get better results than a normal rectangle room.
+Can a evacuation route positively be manipulated by placing obstacles in the room?	
+What is the influence of the desired velocity on the efficiency of a evacuation? Faster is Slow?
+	How do desired and realized velocity depend on each other? 
+	What is the resulting average speed?
 
 
 ## Expected Results
 
 We expect to enhance a evacuation by placing obstacles in the route. This could reduce the velocity and improve the efficiency of the whole evacuation.
+Also we thnk we can find a correlation between desired and realized velocity.
 
 
 ## References 
+
 
 Simulating dynamical features of escape panic	Dirk Helbing, Illes Farkas, Tamas Vicsek
 Modelling crowd turbulence by many-particle simulations		Wenjian Yu, Anders Johansson
